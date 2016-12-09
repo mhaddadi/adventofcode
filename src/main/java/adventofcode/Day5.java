@@ -1,4 +1,4 @@
-package mhaddadi;
+package adventofcode;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
