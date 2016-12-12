@@ -11,7 +11,7 @@ public class Day9 {
 		firstStar(input);
 
 		System.out.println("Second star :");
-		secondStar(input);
+		System.out.println(secondStar(input));
 
 	}
 
@@ -24,29 +24,6 @@ public class Day9 {
 		
 	}
 
-	private static void secondStar(String input) {
-		
-		int nbChar = 0;
-		
-		int indexParenthesis = input.indexOf("(");
-		
-		
-		while (indexParenthesis != -1) {
-			
-			nbChar += indexParenthesis;
-			input = input.substring(indexParenthesis);
-			
-			input = decompressString(input);
-			
-			indexParenthesis = input.indexOf("(");
-			
-		}
-		nbChar += input.length();
-		System.out.println(nbChar);
-		
-	}
-	
-	
 	private static String decompressString(String input) {
 		
 		StringBuilder sb = new StringBuilder(2 * input.length());
@@ -97,6 +74,63 @@ public class Day9 {
 		}
 		
 		return sb.toString();
+	}
+	
+	private static long secondStar(String input) {
+		
+		long nbChar = 0;
+		
+		for (int i = 0; i < input.length(); i++) {
+			
+			char currentChar = input.charAt(i);
+			
+			if ('(' == currentChar) {
+				i++;
+				currentChar = input.charAt(i);
+
+				String nbCharsToRepeat = "";
+				while (currentChar != 'x') {
+					nbCharsToRepeat += currentChar;
+					i++;
+					currentChar = input.charAt(i);
+				}
+				
+				i++;
+				currentChar = input.charAt(i);
+				
+				String nbTimesToRepeat = "";
+				while (currentChar != ')') {
+					nbTimesToRepeat += currentChar;
+					i++;
+					currentChar = input.charAt(i);
+				}
+				
+				i++;
+
+				String subStringToRepeat = input.substring(i, i + Integer.parseInt(nbCharsToRepeat));
+				
+				if (subStringToRepeat.contains("(")) {
+					
+					nbChar += Integer.parseInt(nbTimesToRepeat) * secondStar(subStringToRepeat);
+					
+				} else {
+				
+					nbChar += Integer.parseInt(nbCharsToRepeat) * Integer.parseInt(nbTimesToRepeat);
+					
+				}
+
+				i = i + Integer.parseInt(nbCharsToRepeat) - 1;
+				
+			} else {
+				
+				nbChar++;
+				
+			}
+			
+		}
+		
+		return nbChar;
+		
 	}
 	
 }
