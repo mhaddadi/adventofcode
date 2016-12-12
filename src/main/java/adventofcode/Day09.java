@@ -2,7 +2,7 @@ package adventofcode;
 
 import java.io.IOException;
 
-public class Day9 {
+public class Day09 {
 	
 	public static void main(String[] args) throws IOException {
 		String input = args[0];

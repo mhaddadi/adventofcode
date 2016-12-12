@@ -1,6 +1,6 @@
 package adventofcode;
 
-public class Day2 {
+public class Day02 {
 
 	public static void main(String[] args) throws Exception {
 		

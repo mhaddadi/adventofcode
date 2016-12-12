@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class Day6 {
+public class Day06 {
 	public static void main(String[] args) {
 		System.out.println("First star :");
 		firstStar(args);

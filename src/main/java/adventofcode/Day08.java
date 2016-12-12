@@ -1,6 +1,6 @@
 package adventofcode;
 
-public class Day8 {
+public class Day08 {
 	
 	private static int SCREEN_WIDTH = 50;
 	private static int SCREEN_HEIGHT = 6;

@@ -1,6 +1,6 @@
 package adventofcode;
 
-public class Day7 {
+public class Day07 {
 	public static void main(String[] args) {
 		System.out.println("First star :");
 		firstStar(args);
