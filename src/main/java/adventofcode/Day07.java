@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Day7 {
-
+public class Day07 {
+	
+	
 	public static void main(String[] args) throws IOException {
-
 		System.out.println("First star :");
 		firstStar(args);
 

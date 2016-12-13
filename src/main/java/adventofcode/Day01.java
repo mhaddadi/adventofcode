@@ -10,7 +10,7 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Day1 {
+public class Day01 {
 
 	public static void main(String[] args) throws Exception {
 		

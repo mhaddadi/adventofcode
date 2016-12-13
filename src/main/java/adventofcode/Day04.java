@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day4 {
+public class Day04 {
 
 	private static final Pattern PATTERN_ENCRYPTED_NAME = Pattern.compile("^[a-z-]*");
 	private static final Pattern PATTERN_ID = Pattern.compile("\\d+");
